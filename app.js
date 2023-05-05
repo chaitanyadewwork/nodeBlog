@@ -24,20 +24,20 @@ app.post('/', (req, res) => {
     let PageName = req.body.pageTitle;
     let PageContent = req.body.pageContent;
     try {
-        if (PageName !== undefined & PageContent !== undefined || PageName !== '' & PageContent !== '') {
-            // let PageName=req.body.pageTitle;
-            // let PageName=req.body.pageContent;
 
-            // addBlog.addBlog(PageName, PageContent, app)
-            // setTimeout(() => {
-            //     res.redirect('/' + PageName);
-            // }, 500);
-            console.log(PageName);
-            blog_pages.push([PageName, PageContent])
-            CurrentAdded += 1
+        // let PageName=req.body.pageTitle;
+        // let PageName=req.body.pageContent;
+
+        // addBlog.addBlog(PageName, PageContent, app)
+        // setTimeout(() => {
+        //     res.redirect('/' + PageName);
+        // }, 500);
+        console.log(PageName);
+        blog_pages.push([PageName, PageContent])
+        CurrentAdded += 1
 
 
-        }
+        res.redirect("/")
 
     } catch (error) {
         console.log(error);
@@ -47,5 +47,5 @@ app.post('/', (req, res) => {
 
 })
 app.listen(5000, () => {
-    console.log('https://localhost:5000');
+    console.log('http://localhost:5000');
 });
