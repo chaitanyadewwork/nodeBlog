@@ -1,0 +1,18 @@
+<%- include("header") -%>
+
+
+<div class="container-fluid ">
+    <h1 class="display-3">Blogs</h1>
+    
+    <%for(let i=0;i<blogPages.length;i++){%>
+        <div class="container">
+            <h2>Blog-<%= i+1%></h2>
+            <h3><%= blogPages[i][0] %></h3>
+            <p><%= blogPages[i][1] %></p>
+        </div>
+        
+    <%}%>
+</div>
+
+
+<%- include("footer") -%>

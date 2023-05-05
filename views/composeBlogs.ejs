@@ -1,0 +1,37 @@
+<%- include("header") -%>
+    <style>
+        .form-container {
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .form-container>input{
+            outline: none;
+            margin: 12px;
+            padding-left: 25%;
+            padding-right: 25%;
+        }
+        .form-container>button{
+            border: none;
+            
+            padding: 1.5rem 3rem 1.5rem 3rem ;
+            margin-top: 12px;
+        }
+        .form-container>textarea{
+            width: 70%;
+
+        }
+    </style>
+
+
+    <form action="/" method="post" class="form-container">
+        <input autocomplete="off" type="text" name="pageTitle" placeholder="Write Title of Page">
+        <!-- <input autocomplete="off" type="text"  name="createPage" placeholder="Write Your Blog Here" id=""> -->
+        <textarea name="pageContent" id="" cols="30" rows="10"></textarea>
+
+        <button type="submit">submit</button>
+    </form>
+
+    <%- include("footer") -%>
